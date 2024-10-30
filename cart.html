@@ -1,0 +1,76 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Shopping Cart</title>
+    <!-- Your existing styles and scripts here -->
+</head>
+<body>
+
+    <!-- Your existing HTML structure -->
+
+    <main>
+        <h2>Grocery Products</h2>
+
+        <!-- Your product containers and details go here -->
+
+        <!-- Order Confirm Button -->
+        <button class="order-confirm-button" onclick="orderConfirm()">Order Confirm</button>
+    </main>
+
+    <!-- Cart Section -->
+    <div class="cart-section" id="cartSection">
+        <h2>Shopping Cart</h2>
+        <div id="cartItems"></div>
+        <div class="cart-total">Total: £<span id="totalPrice">0.00</span></div>
+        <div class="cart-totals">
+            <p>VAT: £<span id="vatAmount">0.00</span></p>
+            <p>NET: £<span id="netAmount">0.00</span></p>
+            <p>Gross: £<span id="grossAmount">0.00</span></p>
+        </div>
+    </div>
+
+    <!-- Your existing HTML structure -->
+
+    <script>
+        // Your existing JavaScript code here
+
+        function updateCartTotals() {
+            // Calculate VAT, NET, and Gross amounts
+            var vatRate = 0.20; // 20% VAT rate (adjust as needed)
+            var netAmount = total / (1 + vatRate);
+            var vatAmount = total - netAmount;
+            var grossAmount = total;
+
+            // Update the HTML elements with calculated values
+            document.getElementById('netAmount').innerText = netAmount.toFixed(2);
+            document.getElementById('vatAmount').innerText = vatAmount.toFixed(2);
+            document.getElementById('grossAmount').innerText = grossAmount.toFixed(2);
+        }
+
+        function addToCart(productName, price, quantityId) {
+            // Your existing addToCart function
+
+            // After updating the cart, recalculate totals
+            updateCartTotals();
+        }
+
+        function removeFromCart(button, price) {
+            // Your existing removeFromCart function
+
+            // After updating the cart, recalculate totals
+            updateCartTotals();
+        }
+
+        function orderConfirm() {
+            // Your existing orderConfirm function
+
+            // After confirming the order, recalculate totals
+            updateCartTotals();
+        }
+    </script>
+
+</body>
+</html>

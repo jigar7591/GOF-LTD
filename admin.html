@@ -1,0 +1,37 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+</head>
+<body>
+
+    <h2>Add Product</h2>
+    <form action="process_product.php" method="post" enctype="multipart/form-data">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" required><br>
+
+        <label for="productPrice">Product Price:</label>
+        <input type="number" id="productPrice" name="productPrice" step="0.01" required><br>
+
+        <label for="productImage">Product Image:</label>
+        <input type="file" id="productImage" name="productImage" accept="image/*" required><br>
+
+        <input type="submit" value="Add Product">
+    </form>
+
+    <h2>Update Product Price</h2>
+    <form action="process_price_update.php" method="post">
+        <label for="productNameUpdate">Product Name:</label>
+        <input type="text" id="productNameUpdate" name="productNameUpdate" required><br>
+
+        <label for="newPrice">New Price:</label>
+        <input type="number" id="newPrice" name="newPrice" step="0.01" required><br>
+
+        <input type="submit" value="Update Price">
+    </form>
+
+</body>
+</html>

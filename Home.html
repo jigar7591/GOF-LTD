@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOF LTD</title>
+
+ 
+
+
+    <style>
+        /* Add your styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1em;
+            margin: 0 1em;
+        }
+
+        main {
+            padding: 2em;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+	.modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+	.modal-content {
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 5px;
+        }
+	.product {
+            border: 1px solid #ccc;
+            padding: 1em;
+            margin: 1em;
+            text-align: center;
+        }
+	.oil {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+	}
+
+        .oil-content {
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 5px;
+        }
+
+        .oil_p{
+            border: 1px solid #ccc;
+            padding: 1em;
+            margin: 1em;
+            text-align: center;
+        }
+	.spices {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+	.spices-content {
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 5px;
+        }
+	.spices_p {
+            border: 1px solid #ccc;
+            padding: 1em;
+            margin: 1em;
+            text-align: center;
+	}
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>GOF LTD</h1>
+    </header>
+
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+	<a href="order.html">Order Form</a>
+    </nav>
+
+    <main>
+        <h2>Welcome to Our Website!</h2>
+	<button onclick="RICE()">RICE</button>
+
+        <div class="modal" id="productModal">
+            <div class="modal-content">
+                <h3>Rice List</h3>
+                <ul>
+                    <li>Josh Basmati</li>
+                    <li>Tilda Basmati</li>
+                    <li>VT Mega</li>
+                    <!-- Add more products as needed -->
+                </ul>
+                <button onclick="closeProductList()">Close</button>
+            </div>
+        </div>
+
+	<button onclick="OIL()">OIL</button>
+
+        <div class="oil" id="oilModal">
+            <div class="oil-content">
+                <h3>Oil List</h3>
+                <ul>
+                    <li>Josh Oil</li>
+                    <li>Pride Oil</li>
+                    <li>KTC Oil</li>
+                    <!-- Add more products as needed -->
+                </ul>
+                <button onclick="closeOilList()">Close</button>
+            </div>
+        </div>
+
+	<button onclick="SPICES()">SPICES</button>
+
+        <div class="spices" id="spicesModal">
+            <div class="spices-content">
+                <h3>Spices List</h3>
+                <ul>
+                    <li>Haldi Powder</li>
+                    <li>Chilli Powder</li>
+                    <li>Dhaniya Powder</li>
+                    <!-- Add more products as needed -->
+                </ul>
+                <button onclick="closeSpicesList()">Close</button>
+            </div>
+        </div>
+
+        <div class="product">
+	 
+            <img src="gof.jpg" alt="GOF" width="200">
+            <h3>GOF LTD</h3>
+            <p>Gandhi Oriental Foods Ltd <br>
+		Unit 5, Rima House <br>
+		028 593 2286<br>
+		IG11 0RH</p>
+            
+        </div>
+	
+
+        <!-- Add more product sections as needed -->
+
+    </main>
+
+    <footer>
+        &copy; 2023 www.gofltd.com. All rights reserved.
+    </footer>
+ 	<script>
+        function RICE() {
+            document.getElementById('productModal').style.display = 'flex';
+        }
+
+        function closeProductList() {
+            document.getElementById('productModal').style.display = 'none';
+        }
+    </script>
+	<script>
+        function OIL() {
+            document.getElementById('oilModal').style.display = 'flex';
+        }
+
+        function closeOilList() {
+            document.getElementById('oilModal').style.display = 'none';
+        }
+    </script>
+	<script>
+        function SPICES() {
+            document.getElementById('spicesModal').style.display = 'flex';
+        }
+
+        function closeSpicesList() {
+            document.getElementById('spicesModal').style.display = 'none';
+        }
+    </script>
+	<script>
+
+</body>
+
+</html>
